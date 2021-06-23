@@ -1,0 +1,15 @@
+redirect기능은 url요청을 다시한번 보내달라고 서버로 요청하는것 그로인해 postmapping의 결과는 getmapping의 home메소드를 실행해 준다.
+http://localhost:8080/home   실행결과=>서버에 B메시지와 a메시지가 찍히는것을 확인할수 있다.
+
+@GetMapping("/")
+public String home(){
+sout("a");
+  return "home";
+}
+
+
+@PostMapping("/home")
+public String homeRe(){
+sout("B");
+return "redirect:/";
+}
