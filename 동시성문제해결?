@@ -1,0 +1,9 @@
+
+
+
+
+private static final Map<Long, Item> store = new HashMap<>();//실제로는 hashmap 쓰면안됨
+    //동시에 여러 쓰레드가 접근하면 ConcurrentHashMap<>()
+    
+    
+long -> AtomicLong 또한 동시에 여러 쓰레드가 접근하면 사용해야 한다는데 아직은 이해를 못 했고 까먹을까봐 메모합니다..
