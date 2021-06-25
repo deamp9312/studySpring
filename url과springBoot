@@ -1,0 +1,6 @@
+사용자가 웹 브라우저에서 url을 서버로 보내게 되면 스프링 부트의 내장된 톰켓서버가 우선 스프링 컨테이너에서 컨트롤러에 부합하는 로직을 찾아보고
+(1,2)
+
+1)없을경우 값을 viewrESOLVER에 보내 HTML 변환 후 전송해준다 (정적일땐 template/aaa.html)//(Thymeleaf 템플릿 엔진)
+2)HttpMessageConverter에서 객체 or 문자로 전송되는 data에 따라 JsonConverter or StringConverter이 실행됨,
+json은 {key : value}반환 //Jackson이 실행됨
