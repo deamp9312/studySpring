@@ -1,0 +1,24 @@
+
+-----1>
+@Controller가 사용된
+mvc의 컨트롤 부분에서 
+
+@RequestMapping("/aa")
+//@GetMapping or post
+public String abc(){
+  return "aa";
+}
+이 경우에는 aa.html로 반환해준다(뷰 이름으로 반환시켜준다)
+
+----2>
+@RestController가 사용된 mvc의 컨트롤 클래스에서는
+
+위와같은 조건이면 문자열 "aa"로 반환된다
+ 
+ 
+ ------
+ 
+요청 파라미터와 다르게, HTTP 메시지 바디를 통해 데이터가 직접 데이터가 넘어오는 경우는
+@RequestParam , @ModelAttribute 를 사용할 수 없다. 
+(물론 HTML Form 형식으로 전달되는 경우는
+요청 파라미터로 인정된다.)
